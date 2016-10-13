@@ -22,6 +22,10 @@ public class User {
 	 */
 	private Integer isDel;
 	/**
+	 *  角色ID
+	 */
+	private Integer adminId;
+	/**
 	 * 用户id
 	 * @param userId
 	 */
@@ -80,5 +84,20 @@ public class User {
      */	
     public Integer getIsDel(){
     	return isDel;
+    }
+	/**
+	 * 角色ID
+	 * @param adminId
+	 */
+	public void setAdminId(Integer adminId){
+		this.adminId = adminId;
+	}
+	
+    /**
+     * 角色ID
+     * @return
+     */	
+    public Integer getAdminId(){
+    	return adminId;
     }
 }

@@ -1,12 +1,12 @@
 package com.hzit.dao.mapper;
 
-import java.util.List;
-import java.util.Map;
-
-import org.apache.ibatis.annotations.Param;
-import com.hzit.dao.entity.User;
 import com.fc.platform.commons.page.Page;
 import com.fc.platform.commons.page.Pageable;
+import com.hzit.dao.entity.User;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
+import java.util.Map;
 
 public interface UserMapper {
 
@@ -16,8 +16,8 @@ public interface UserMapper {
 
 	void updateUser(User user);
 
-	Page<User> searchUserByParams(@Param("map")Map<String, String> map , Pageable pageable);
+	Page<User> searchUserByParams(@Param("map") Map<String, String> map, Pageable pageable);
 
-	List<User> searchUserByParams(@Param("map")Map<String, String> map);
+	List<User> searchUserByParams(@Param("map") Map<String, String> map);
 
 } 

@@ -7,7 +7,8 @@
         userId,
         userName,
         userPossword,
-        isDel
+        isDel,
+        adminID
     </sql>
 
     <sql id="userBaseWhereSql">
@@ -25,6 +26,9 @@
                 <if test="@org.apache.commons.lang3.StringUtils@isNotEmpty(map.isDel)">
                     AND isDel = #{map.isDel}
                 </if>
+                <if test="@org.apache.commons.lang3.StringUtils@isNotEmpty(map.adminId)">
+                    AND adminID = #{map.adminId}
+                </if>
             </where>
         </if>
     </sql>
@@ -36,7 +40,8 @@
             #{userId},
             #{userName},
             #{userPossword},
-            #{isDel}
+            #{isDel},
+            #{adminId}
         )
     </insert>
 
@@ -57,6 +62,9 @@
             <if test="@org.apache.commons.lang3.StringUtils@isNotEmpty(isDel)">
                 isDel = #{isDel} ,
             </if>
+            <if test="@org.apache.commons.lang3.StringUtils@isNotEmpty(adminId)">
+                adminID = #{adminId} ,
+            </if>
         </set>
         WHERE userId = #{userId}
     </update>
@@ -73,6 +81,7 @@
         <result column="userName" property="userName"/>
         <result column="userPossword" property="userPossword"/>
         <result column="isDel" property="isDel"/>
+        <result column="adminID" property="adminId"/>
     </resultMap>
 
 </mapper>
