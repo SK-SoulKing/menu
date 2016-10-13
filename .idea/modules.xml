@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://D://menu/menu.iml" filepath="D://menu/menu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/menu-dao/com.hzit.dao.iml" filepath="$PROJECT_DIR$/menu-dao/com.hzit.dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/menu-web/com.hzit.web.iml" filepath="$PROJECT_DIR$/menu-web/com.hzit.web.iml" />
+    </modules>
+  </component>
+</project>

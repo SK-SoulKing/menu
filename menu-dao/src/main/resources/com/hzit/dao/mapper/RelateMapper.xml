@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hzit.dao.mapper.RelateMapper">
+
+    <sql id="relateBaseColumnSql">
+        adminId,
+        moduleId
+    </sql>
+
+    <sql id="relateBaseWhereSql">
+        <if test="map!=null">
+            <where>
+                <if test="@org.apache.commons.lang3.StringUtils@isNotEmpty(map.adminId)">
+                    adminId = #{map.adminId}
+                </if>
+                <if test="@org.apache.commons.lang3.StringUtils@isNotEmpty(map.moduleId)">
+                    AND moduleId = #{map.moduleId}
+                </if>
+            </where>
+        </if>
+    </sql>
+
+    <insert id="insertRelate" parameterType="com.hzit.dao.entity.Relate">
+        INSERT INTO relate(
+        <include refid="relateBaseColumnSql"/>
+        )VALUES(
+            #{adminId},
+            #{moduleId}
+        )
+    </insert>
+
+    
+    <delete id="deleteRelateBy${table.pkColumn.variableSpellSqlName}" parameterType="${table.pkColumn.javaType}">
+        DELETE FROM relate WHERE ${table.pkColumn.sqlName} = #{${table.pkColumn.variableName}}
+    </delete>
+
+    <update id="updateRelate" parameterType="com.hzit.dao.entity.Relate">
+        UPDATE relate
+        <set>
+        </set>
+        WHERE $pkName = #{${table.pkColumn.variableName}}
+    </update>
+
+    <select id="searchRelateByParams" parameterType="map" resultMap="relateMap">
+        SELECT
+        <include refid="relateBaseColumnSql"/>
+        FROM relate
+        <include refid="relateBaseWhereSql"/>
+    </select>
+
+    <resultMap type="com.hzit.dao.entity.Relate" id="relateMap">
+        <id column="$pkName" property="${table.pkColumn.variableName}"/>
+    </resultMap>
+
+</mapper>
