@@ -20,13 +20,14 @@ public class UserController {
     @RequestMapping("/toindex")
     public String a(@RequestParam("userName") String userName,
                     @RequestParam("userPassword") String userPassword,HttpSession session){
-        if("".equals(userName)||"".equals(userPassword)){
-            return "redirect:/index.html";
-        }
         User user=userServices.findUser(userName,userPassword);
         if(user!=null){
-            session.setAttribute("user",user);
-            return "index";
+            if("".equals(userName)||"".equals(userPassword)){
+                return "redirect:/index.html";
+            }else {
+                session.setAttribute("user",user);
+                return "index";
+            }
         }else {
             return "redirect:/index.html";
         }
