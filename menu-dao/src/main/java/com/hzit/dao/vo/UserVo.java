@@ -1,5 +1,9 @@
 package com.hzit.dao.vo;
 
+import com.hzit.dao.entity.Module;
+
+import java.util.List;
+
 /**
  * 
  * @author SoulKing
@@ -25,6 +29,20 @@ public class UserVo {
 	 *  角色ID
 	 */
 	private Integer adminId;
+
+	/**
+	 *
+	 */
+	private List<Module> moduleList;
+
+	public List<Module> getModuleList() {
+		return moduleList;
+	}
+
+	public void setModuleList(List<Module> moduleList) {
+		this.moduleList = moduleList;
+	}
+
 	/**
 	 * 用户id
 	 * @param userId

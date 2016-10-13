@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 /**
@@ -20,7 +21,8 @@ public class ModuleController {
 
     @RequestMapping("/moduleall")
     //@ResponseBody
-    public String ModuleAll(ModelMap modelMap){
+    public String ModuleAll(ModelMap modelMap,HttpSession s){
+        s.getAttribute("user");
         List<Module> list=moduleServices.findAll();
         modelMap.put("list",list);
         return "index";
