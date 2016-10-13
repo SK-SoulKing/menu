@@ -24,12 +24,16 @@
         <processorPath useClasspath="true" />
         <module name="com.hzit.dao" />
         <module name="com.hzit.web" />
+        <module name="menu-dao" />
+        <module name="menu-web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="com.hzit.dao" target="1.6" />
       <module name="com.hzit.web" target="1.6" />
       <module name="menu" target="1.6" />
+      <module name="menu-dao" target="1.6" />
+      <module name="menu-web" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>
