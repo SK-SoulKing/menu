@@ -26,7 +26,7 @@ public class UserController {
                 return "redirect:/index.html";
             }else {
                 session.setAttribute("user",user);
-                return "index";
+                return "redirect:/moduleall";
             }
         }else {
             return "redirect:/index.html";
