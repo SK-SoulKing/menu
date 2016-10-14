@@ -12,7 +12,7 @@ public class Relate {
 	/**
 	 *  模块id
 	 */
-	private Integer moduleId;
+	private String moduleId;
 	/**
 	 *  ID
 	 */
@@ -36,7 +36,7 @@ public class Relate {
 	 * 模块id
 	 * @param moduleId
 	 */
-	public void setModuleId(Integer moduleId){
+	public void setModuleId(String moduleId){
 		this.moduleId = moduleId;
 	}
 
@@ -44,7 +44,7 @@ public class Relate {
 	 * 模块id
 	 * @return
 	 */
-	public Integer getModuleId(){
+	public String getModuleId(){
 		return moduleId;
 	}
 	/**

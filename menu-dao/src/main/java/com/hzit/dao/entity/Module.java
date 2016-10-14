@@ -8,7 +8,7 @@ public class Module {
 	/**
 	 *  模块ID
 	 */
-	private Integer moduleId;
+	private String moduleId;
 	/**
 	 *  模块名
 	 */
@@ -41,7 +41,7 @@ public class Module {
 	 * 模块ID
 	 * @param moduleId
 	 */
-	public void setModuleId(Integer moduleId){
+	public void setModuleId(String moduleId){
 		this.moduleId = moduleId;
 	}
 	
@@ -49,7 +49,7 @@ public class Module {
      * 模块ID
      * @return
      */	
-    public Integer getModuleId(){
+    public String getModuleId(){
     	return moduleId;
     }
 	/**
@@ -157,4 +157,18 @@ public class Module {
     public Integer getModuleOrder(){
     	return moduleOrder;
     }
+
+	@Override
+	public String toString() {
+		return "Module{" +
+				"moduleId=" + moduleId +
+				", moduleName='" + moduleName + '\'' +
+				", moduleLevel=" + moduleLevel +
+				", moduleFatherId=" + moduleFatherId +
+				", moduleAdd='" + moduleAdd + '\'' +
+				", moduleDepict='" + moduleDepict + '\'' +
+				", moduleIsSon=" + moduleIsSon +
+				", moduleOrder=" + moduleOrder +
+				'}';
+	}
 }

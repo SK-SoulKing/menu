@@ -6,9 +6,9 @@
     <sql id="userBaseColumnSql">
         userId,
         userName,
-        userPossword,
+        userPassword,
         isDel,
-        adminID
+        adminId
     </sql>
 
     <sql id="userBaseWhereSql">
@@ -20,14 +20,14 @@
                 <if test="@org.apache.commons.lang3.StringUtils@isNotEmpty(map.userName)">
                     AND userName = #{map.userName}
                 </if>
-                <if test="@org.apache.commons.lang3.StringUtils@isNotEmpty(map.userPossword)">
-                    AND userPossword = #{map.userPossword}
+                <if test="@org.apache.commons.lang3.StringUtils@isNotEmpty(map.userPassword)">
+                    AND userPassword = #{map.userPassword}
                 </if>
                 <if test="@org.apache.commons.lang3.StringUtils@isNotEmpty(map.isDel)">
                     AND isDel = #{map.isDel}
                 </if>
                 <if test="@org.apache.commons.lang3.StringUtils@isNotEmpty(map.adminId)">
-                    AND adminID = #{map.adminId}
+                    AND adminId = #{map.adminId}
                 </if>
             </where>
         </if>
@@ -39,7 +39,7 @@
         )VALUES(
             #{userId},
             #{userName},
-            #{userPossword},
+            #{userPassword},
             #{isDel},
             #{adminId}
         )
@@ -57,13 +57,13 @@
                 userName = #{userName} ,
             </if>
             <if test="@org.apache.commons.lang3.StringUtils@isNotEmpty(userPossword)">
-                userPossword = #{userPossword} ,
+                userPassword = #{userPassword} ,
             </if>
             <if test="@org.apache.commons.lang3.StringUtils@isNotEmpty(isDel)">
                 isDel = #{isDel} ,
             </if>
             <if test="@org.apache.commons.lang3.StringUtils@isNotEmpty(adminId)">
-                adminID = #{adminId} ,
+                adminId = #{adminId} ,
             </if>
         </set>
         WHERE userId = #{userId}
@@ -79,7 +79,7 @@
     <resultMap type="com.hzit.dao.entity.User" id="userMap">
         <id column="userId" property="userId"/>
         <result column="userName" property="userName"/>
-        <result column="userPossword" property="userPossword"/>
+        <result column="userPassword" property="userPassword"/>
         <result column="isDel" property="isDel"/>
         <result column="adminID" property="adminId"/>
     </resultMap>

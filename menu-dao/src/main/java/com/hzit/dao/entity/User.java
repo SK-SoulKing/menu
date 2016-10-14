@@ -8,7 +8,7 @@ public class User {
 	/**
 	 *  用户id
 	 */
-	private Integer userId;
+	private String userId;
 	/**
 	 *  用户名
 	 */
@@ -16,7 +16,7 @@ public class User {
 	/**
 	 *  用户密码
 	 */
-	private String userPossword;
+	private String userPassword;
 	/**
 	 *  是(1)否(0)删除
 	 */
@@ -29,7 +29,7 @@ public class User {
 	 * 用户id
 	 * @param userId
 	 */
-	public void setUserId(Integer userId){
+	public void setUserId(String userId){
 		this.userId = userId;
 	}
 	
@@ -37,7 +37,7 @@ public class User {
      * 用户id
      * @return
      */	
-    public Integer getUserId(){
+    public String getUserId(){
     	return userId;
     }
 	/**
@@ -57,18 +57,18 @@ public class User {
     }
 	/**
 	 * 用户密码
-	 * @param userPossword
+	 * @param userPassword
 	 */
-	public void setUserPossword(String userPossword){
-		this.userPossword = userPossword;
+	public void setUserPassword(String userPassword){
+		this.userPassword = userPassword;
 	}
 	
     /**
      * 用户密码
      * @return
      */	
-    public String getUserPossword(){
-    	return userPossword;
+    public String getUserPassword(){
+    	return userPassword;
     }
 	/**
 	 * 是(1)否(0)删除

@@ -10,15 +10,15 @@
     </sql>
 
     <sql id="relateBaseWhereSql">
-        <if test="map!=null">
+        <if test="map !=null">
             <where>
-                <if test="map.adminId!=null">
+                <if test="map.adminId !=null">
                     adminId = #{map.adminId}
                 </if>
-                <if test="map.moduleId!=null">
+                <if test="map.moduleId !=null">
                     AND moduleId = #{map.moduleId}
                 </if>
-                <if test="map.relateId!=null">
+                <if test="map.relateId !=null">
                     AND relateId = #{map.relateId}
                 </if>
             </where>

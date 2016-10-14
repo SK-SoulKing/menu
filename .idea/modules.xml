@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/menu-dao/com.hzit.dao.iml" filepath="$PROJECT_DIR$/menu-dao/com.hzit.dao.iml" />
-      <module fileurl="file://$PROJECT_DIR$/menu-web/com.hzit.web.iml" filepath="$PROJECT_DIR$/menu-web/com.hzit.web.iml" />
       <module fileurl="file://$PROJECT_DIR$/menu.iml" filepath="$PROJECT_DIR$/menu.iml" />
       <module fileurl="file://$PROJECT_DIR$/menu-dao/menu-dao.iml" filepath="$PROJECT_DIR$/menu-dao/menu-dao.iml" />
       <module fileurl="file://$PROJECT_DIR$/menu-web/menu-web.iml" filepath="$PROJECT_DIR$/menu-web/menu-web.iml" />

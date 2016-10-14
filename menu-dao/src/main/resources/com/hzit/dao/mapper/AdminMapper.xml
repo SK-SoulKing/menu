@@ -12,7 +12,7 @@
     <sql id="adminBaseWhereSql">
         <if test="map!=null">
             <where>
-                <if test="@org.apache.commons.lang3.StringUtils@isNotEmpty(map.adminId)">
+                <if test="map.adminId!=null">
                     adminId = #{map.adminId}
                 </if>
                 <if test="@org.apache.commons.lang3.StringUtils@isNotEmpty(map.adminName)">

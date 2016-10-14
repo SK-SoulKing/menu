@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Administrator on 2016/10/13.
@@ -19,7 +20,7 @@ public class ModuleImpl implements ModuleServices {
     private ModuleMapper moduleMapper;
 
     @Override
-    public List<Module> findAll() {
-    return moduleMapper.searchModuleByParams(null);
+    public List<Module> findAll(Map map) {
+        return moduleMapper.searchModuleByParams(map);
     }
 }
